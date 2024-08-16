@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgrey;
+  font-family: sans-serif;
+}
+
+h1, p, h2 {
+  margin: 10px;
+}
+
+.templateGrid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template: [header-left] "head head" 4rem [header-right] [main-left] "nav main" 1fr [main-right] [footer-left] "foot foot" 3rem [footer-right]/120px 1fr;
+}
+
+.layout-header {
+  background-color: skyblue;
+  grid-area: head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 3px 0px 10px 0px;
+}
+
+.layout-sidebar {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  padding-left: 10px;
+}
+
+.layout-main {
+  grid-area: main;
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid black;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.butonFrame {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.buton {
+  padding: 5px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.layout-footer {
+  background-color: black;
+  color: white;
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
